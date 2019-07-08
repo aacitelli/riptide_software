@@ -4,27 +4,12 @@ from flexbe_core.proxy import ProxyActionClient
 
 # example import of required action
 #need to import the yolo bbox shit here so that we can align to it. Not sure if those values should be hardcoded. I think that that will be up to the people in CBUS to test the correct values and try it out
-from chores.msg import DoDishesAction, DoDishesGoal
+
 
 
 class AlignActionState(EventState):
-	'''
-	Actionlib actions are the most common basis for state implementations
-	since they provide a non-blocking, high-level interface for robot capabilities.
-	The example is based on the DoDishes-example of actionlib (see http://wiki.ros.org/actionlib).
-	This time we have input and output keys in order to specify the goal and possibly further evaluate the result in a later state.
-
-	-- dishes_to_do int 	Expected amount of dishes to be cleaned.
-
-	># dishwasher 	int 	ID of the dishwasher to be used.
-
-	#> cleaned 		int 	Amount of cleaned dishes.
-
-	<= cleaned_some 		Only a few dishes have been cleaned.
-	<= cleaned_enough		Cleaned a lot of dishes.
-	<= command_error		Cannot send the action goal.
-
-	'''
+	
+	
 
 	def __init__(self):
 		# See example_state.py for basic explanations.

@@ -6,20 +6,16 @@ from flexbe_core.proxy import ProxyActionClient
 #move action and goal should be here
 
 
-
-class MoveActionState(EventState):
+class MoveToGarlicDropState(EventState):
 	'''
 	Actionlib actions are the most common basis for state implementations
 	since they provide a non-blocking, high-level interface for robot capabilities.
-	The example is based on the DoDishes-example of actionlib (see http://wiki.ros.org/actionlib).
-	This time we have input and output keys in order to specify the goal and possibly further evaluate the result in a later state.
-
-
+	
 	'''
 
 	def __init__(self):
 		# See example_state.py for basic explanations.
-		super(MoveActionState, self).__init__(outcomes = ['success', 'failed', 'command_error']
+		super(MoveToGarlicDropState, self).__init__(outcomes = ['success', 'failed', 'command_error']
 												 )
 
 		
@@ -29,8 +25,9 @@ class MoveActionState(EventState):
 		# and will trigger a timeout error if it is not available.
 		# Using the proxy client provides asynchronous access to the result and status
 		# and makes sure only one client is used, no matter how often this state is used in a behavior.
-		self._topic = 'do_dishes'
-		self._client = ProxyActionClient({self._topic: DoDishesAction}) # pass required clients as dict (topic: type)
+        #declare action client here
+		self._topic = 'moveXy'
+		self._client = ProxyActionClient({self._topic: MoveAction}) # pass required clients as dict (topic: type)
 
 		# It may happen that the action client fails to send the action goal.
 		self._error = False
@@ -65,6 +62,9 @@ class MoveActionState(EventState):
 		
 		# Create the goal.
 		
+        #Write the heading alignment here
+
+        #write the forwards movement call here
 
 		# Send the goal.
 		self._error = False # make sure to reset the error state since a previous state execution might have failed

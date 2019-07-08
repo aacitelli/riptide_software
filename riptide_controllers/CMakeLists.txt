@@ -31,21 +31,23 @@ find_package(Eigen3 REQUIRED)
 generate_dynamic_reconfigure_options(
   cfg/VehicleProperties.cfg
   cfg/AttitudeController.cfg
+  cfg/LinearController.cfg
 )
 
 add_action_files(
   DIRECTORY action
-  FILES Calibration.action
-        depth_command.action
-        Calibrate.action
-        GoToDepth.action
-        GoToYaw.action
-        GoToPitch.action
-        GoToRoll.action
+  FILES Calibrate.action
+  GoToDepth.action
+  GoToYaw.action
+  GoToPitch.action
+  GoToRoll.action
+  GoToTask.action
+  MoveDistance.action
+  SickTricks.action
 )
 
 generate_messages(
-  DEPENDENCIES actionlib_msgs std_msgs  # Or other packages containing msgs
+  DEPENDENCIES actionlib_msgs std_msgs geometry_msgs # Or other packages containing msgs
 )
 
 catkin_package(
