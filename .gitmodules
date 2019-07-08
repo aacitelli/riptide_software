@@ -1,3 +1,6 @@
 [submodule "flexbe_app"]
 	path = flexbe_app
 	url = https://github.com/FlexBE/flexbe_app.git
+[submodule "nortek_dvl"]
+	path = nortek_dvl
+	url = https://github.com/osu-uwrt/nortek_dvl.git

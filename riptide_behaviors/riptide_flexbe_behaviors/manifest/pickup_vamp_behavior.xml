@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="pickup_vamp_behavior">
+
+	<executable package_path="riptide_flexbe_behaviors.pickup_vamp_behavior_sm" class="pickup_vamp_behaviorSM" />
+	<tagstring></tagstring>
+	<author>Parth</author>
+	<date>Mon Jul 08 2019</date>
+	<description>
+		Pick up vamp and surface
+	</description>
+
+
+	<!-- Contained Behaviors -->
+
+	<!-- Available Parameters -->
+
+</behavior>

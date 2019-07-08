@@ -20,7 +20,7 @@ add_message_files(
     Imu.msg
     SwitchState.msg
     TaskAlignment.msg
-    GateData.msg
+   
     PoleData.msg
     BoundingBox.msg
     ResetControls.msg
