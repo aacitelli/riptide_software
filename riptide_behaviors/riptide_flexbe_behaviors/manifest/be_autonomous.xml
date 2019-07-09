@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="Be_Autonomous">
+
+	<executable package_path="riptide_flexbe_behaviors.be_autonomous_sm" class="Be_AutonomousSM" />
+	<tagstring></tagstring>
+	<author>Parth Parekh</author>
+	<date>Mon Jul 08 2019</date>
+	<description>
+		Be autonomous
+	</description>
+
+
+	<!-- Contained Behaviors -->
+	<contains name="startup_behavior" />
+	<contains name="gate_task" />
+	<contains name="slay_vamp_behavior" />
+	<contains name="garlic_drop_behavior" />
+	<contains name="buoy_task_behavior" />
+	<contains name="pickup_vamp_behavior" />
+
+	<!-- Available Parameters -->
+
+</behavior>
